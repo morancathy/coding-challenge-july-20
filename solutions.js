@@ -7,4 +7,18 @@
  // will print to your computer console. The console.log is used during development as a 'checking' measure. The return is actual
  // data that will be used in your code.
 
- 
+ //Palindrome
+ const checkPalindrome = (param) => {
+   const str = param.toLowerCase();
+
+   for(let i = 0; i < str.length; i++) {
+     if (str[i] !== str[(str.length-1)-i]) {
+        return false;
+     } else {
+       return true;
+     }
+   }
+ }
+
+console.log(checkPalindrome("Cathy"));
+console.log(checkPalindrome("TacoCat"));
