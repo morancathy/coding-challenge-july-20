@@ -7,7 +7,7 @@
  // will print to your computer console. The console.log is used during development as a 'checking' measure. The return is actual
  // data that will be used in your code.
 
- //Palindrome
+ // Palindrome
  const checkPalindrome = (param) => {
    const str = param.toLowerCase();
 
@@ -18,7 +18,20 @@
        return true;
      }
    }
- }
+ };
 
 console.log(checkPalindrome("Cathy"));
 console.log(checkPalindrome("TacoCat"));
+
+
+// Sum Array
+const sumArray = (array) => {
+  let sum = 0;
+
+  for(let i = 0; i < array.length; i++) {
+    sum = sum + array[i]
+  }
+  return sum;
+};
+
+console.log("Sum of Array is: ", sumArray([1, 2, 3, 4, 5, 6]));
