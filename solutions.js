@@ -33,5 +33,49 @@ const sumArray = (array) => {
   }
   return sum;
 };
+let myArray = [1, 2, 3, 4, 5, 6];
+console.log(`The sum of the array [${myArray}] equals ${sumArray(myArray)}.`);
 
-console.log("Sum of Array is: ", sumArray([1, 2, 3, 4, 5, 6]));
+
+// Prime Numbers
+// Step One
+const checkPrime = (num) => {
+  let squareRoot = (Math.sqrt(num));
+
+  if (num <= 1) {
+    return false
+  } else if (num === 2) {
+    return true
+  };
+
+  if( num < 10) {
+    for (let i = 2; i < num; i++){
+     if (num % i === 0) {
+        return false
+      }
+    }
+    return true
+  } else if (num >= 10) {
+      for(let i = 2; i <= squareRoot; i++) {
+        if(num % i === 0){
+          return false
+        }
+      }
+      return true
+  }
+};
+
+let number = 25;
+console.log(`${number} is a prime number: ${checkPrime(number)}.`)
+
+// Step Two
+const printPrimes = (num) => {
+  console.log(`List of primes from 0 - ${num}:`)
+  for(let i = 0; i < num + 1; i ++){
+    if(checkPrime(i) === true){
+      console.log(i)
+    }
+  }
+};
+
+printPrimes(97);
