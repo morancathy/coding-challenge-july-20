@@ -71,6 +71,7 @@ console.log(`${number} is a prime number: ${checkPrime(number)}.`)
 // Step Two
 const printPrimes = (num) => {
   console.log(`List of primes from 0 - ${num}:`)
+
   for(let i = 0; i < num + 1; i ++){
     if(checkPrime(i) === true){
       console.log(i)
@@ -79,3 +80,39 @@ const printPrimes = (num) => {
 };
 
 printPrimes(97);
+
+//##########################################################################
+console.log(`\nRock, Paper, Scissors Game`)
+// Rock Paper Scissors
+//function randomly selects player's move
+const randomMove = () => {
+  let move = ['rock', 'paper', 'scissors'];
+  return `${move[Math.floor(Math.random() * move.length)]}`;
+};
+
+// function plays one round of game, determining winner
+const rockPaperScissors = (move1, move2) => {
+
+  let userMove = randomMove();
+  let computerMove = randomMove();
+
+  if(userMove === computerMove) {
+    return (`User choose: ${userMove}.\nComputer choose: ${computerMove}.\nIt's a tie!`)
+  } else if(userMove === `rock` && computerMove === `paper`) {
+    return (`User choose: ${userMove}.\nComputer choose: ${computerMove}.\nComputer Wins!`)
+  } else if(userMove === `rock` && computerMove === `scissors`) {
+    return (`User choose: ${userMove}.\nComputer choose: ${computerMove}.\nUser Wins!`)
+  } else if(userMove === `paper` && computerMove === `scissors`) {
+    return (`User choose: ${userMove}.\nComputer choose: ${computerMove}.\nComputer Wins!`)
+  } else if(userMove === `paper` && computerMove === `rock`) {
+    return (`User choose: ${userMove}.\nComputer choose: ${computerMove}.\nUser Wins!`)
+  } else if(userMove === `scissors` && computerMove === `rock`) {
+    return (`User choose: ${userMove}.\nComputer choose: ${computerMove}.\nComputer Wins!`)
+  } else if(userMove === `scissors` && computerMove === `paper`) {
+    return (`User choose: ${userMove}.\nComputer choose: ${computerMove}.\nUser Wins!`)
+  } else {
+    return ('Error')
+  }
+}
+console.log(rockPaperScissors())
+//##########################################################################
