@@ -6,7 +6,8 @@
  // exact location the function was called.  A console.log is any data that is wrapped in () after the console.log statement that
  // will print to your computer console. The console.log is used during development as a 'checking' measure. The return is actual
  // data that will be used in your code.
-
+//##########################################################################
+console.log(`Palindrome Check`)
  // Palindrome
  const checkPalindrome = (param) => {
    const str = param.toLowerCase();
@@ -19,11 +20,14 @@
      }
    }
  };
+let strToCheck = "Cathy";
+let strToCheck2 = "TacoCat";
 
-console.log(checkPalindrome("Cathy"));
-console.log(checkPalindrome("TacoCat"));
+console.log(`${strToCheck} is a palindrome: ${checkPalindrome(strToCheck)}.`);
+console.log(`${strToCheck2} is a palindrome: ${checkPalindrome(strToCheck2)}.`);
 
-
+//##########################################################################
+console.log(`\nSum of An Array`)
 // Sum Array
 const sumArray = (array) => {
   let sum = 0;
@@ -34,9 +38,13 @@ const sumArray = (array) => {
   return sum;
 };
 let myArray = [1, 2, 3, 4, 5, 6];
+let myArray2 = [6, 2, 1];
+
 console.log(`The sum of the array [${myArray}] equals ${sumArray(myArray)}.`);
+console.log(`The sum of the array [${myArray2}] equals ${sumArray(myArray2)}.`);
 
-
+//##########################################################################
+console.log(`\nPrime Number Check`)
 // Prime Numbers
 // Step One
 const checkPrime = (num) => {
@@ -66,11 +74,13 @@ const checkPrime = (num) => {
 };
 
 let number = 25;
+let number1 = 97;
 console.log(`${number} is a prime number: ${checkPrime(number)}.`)
+console.log(`${number1} is a prime number: ${checkPrime(number1)}.`)
 
 // Step Two
 const printPrimes = (num) => {
-  console.log(`List of primes from 0 - ${num}:`)
+  console.log(`\nList of primes from 0 - ${num}:`)
 
   for(let i = 0; i < num + 1; i ++){
     if(checkPrime(i) === true){
